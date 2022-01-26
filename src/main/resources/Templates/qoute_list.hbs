@@ -4,13 +4,15 @@
 
 {{#if goals}} <!--if goals exist, then -->
 {{#each goals}} <!--loop-->
-<p>{{ title }}</p>
-<p>{{ category }}</p>
-<p>{{ description }}</p>
-<p>{{ subjectGoalReferTo }}</p>
+<p>Title{{ title }}</p>
+<p>Category{{ category }}</p>
+<p>Description{{ description }}</p>
+<p>Quote{{ quote }}</p>
 <p>{{}}</p>
 {{/each}}
 {{/else}}<!--no goals-->
+<p>No goal created</p>
+{{/if}}
 {{/partial}}
 
 {{> layout.hbs}}

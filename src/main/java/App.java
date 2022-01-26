@@ -9,10 +9,11 @@ import static spark.Spark.*;
 
 public class App {
     public static void main(String[] args) {
-        get("/form", (request, response) -> {
+        externalStaticFileLocation("/public");
+        get("/home", (request, response) -> {
             Map<String, Object> model = new HashMap<String, Object>();
 
-            return new ModelAndView(model, "form.hbs");
+            return new ModelAndView(model, "home.hbs");
         }, new HandlebarsTemplateEngine());
         get("/quote_list", (request, response) -> {
             Map<String, Object>model = new HashMap<String, Object>();
@@ -24,7 +25,7 @@ public class App {
             return new ModelAndView(model, "quote_list.hbs");
         }, new HandlebarsTemplateEngine());
 
-        post("/new/home", (request, response) -> {
+        post("/home", (request, response) -> {
             HashMap<String, Object> model = new HashMap<String, Object>();
             String title = request.queryParams("title");
             String category = request.queryParams("category");
