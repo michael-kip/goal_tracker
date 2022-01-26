@@ -1,0 +1,30 @@
+{{#partial "title"}}
+Create a goal!
+{{/partial}}
+
+
+{{#partial "content"}}
+<h1>Fill in the form to create your goals</h1>
+<form action ='/new/home' method = "post">
+<div class = "form-group">
+<label for ="title">Title</label>
+<input id = "title" name = "title" type="text" class = "form-control">
+<div>
+<div class = "form-group">
+<label for ="category">Category</label>
+<input id = "category" name = "category" type="text" class = "form-control">
+<div>
+<div class = "form-group">
+<label for ="description">Description</label>
+<input id = "description" name = "description" type="text" class = "form-control">
+<div>
+<div class = "form-group">
+<label for ="quote">About quote</label>
+<input id = "quote" name = "quote" type="text" class = "form-control">
+<div>
+<button type ="submit" class = "btn">Add!</button>
+</form>
+
+{{/partial}}
+
+{{> layout.hbs}}

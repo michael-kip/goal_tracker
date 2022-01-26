@@ -1,12 +1,16 @@
-{{#partial "title"}}
-Your goals
-{{/partial}}
+{{#partial "mainDiv"}}
+<p>Your goals<p>
 
-{{#partial "content"}}
-<p></p>
-<p>{{name}}</p>
-<p>{{description}}</p>
-<p></p>
+
+{{#if goals}} <!--if goals exist, then -->
+{{#each goals}} <!--loop-->
+<p>{{ title }}</p>
+<p>{{ category }}</p>
+<p>{{ description }}</p>
+<p>{{ subjectGoalReferTo }}</p>
+<p>{{}}</p>
+{{/each}}
+{{/else}}<!--no goals-->
 {{/partial}}
 
 {{> layout.hbs}}
